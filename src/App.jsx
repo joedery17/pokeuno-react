@@ -4,7 +4,7 @@ function App() {
 
   const [pokemons, setPokemons] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const [search, setSearch] = useState(""); // 🔎 estado del buscador
+  const [search, setSearch] = useState(""); 
 
   useEffect(() => {
     async function fetchPokemons() {
@@ -42,7 +42,7 @@ function App() {
     }
   };
 
-  // 🔎 filtro por nombre
+
   const filteredPokemons = pokemons.filter((pokemon) =>
     pokemon.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -53,7 +53,7 @@ function App() {
         Lista de Pokemon - Primera Generación
       </h1>
 
-      {/* 🔎 Buscador */}
+      
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <input
           type="text"
@@ -73,7 +73,7 @@ function App() {
         Mi Equipo ({favorites.length}/6)
       </h2>
 
-      {/* Equipo */}
+      
       <div
         style={{
           display: "flex",
@@ -105,7 +105,7 @@ function App() {
         ))}
       </div>
 
-      {/* Lista de Pokémon */}
+      
       <div
         style={{
           display: "grid",
